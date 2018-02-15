@@ -846,7 +846,7 @@ class DBOperations
         
         $salt      = sha1(mt_rand());
         $salt      = substr($salt, 0, 10);
-        $encrypted = password_hash($password . "621317", PASSWORD_BCRYPT, ['cost' => 14]);
+        $encrypted = password_hash($password . "######", PASSWORD_BCRYPT, ['cost' => 14]); //Secret
         $hash      = $encrypted;        
         return $hash;
         
